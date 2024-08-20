@@ -1,0 +1,30 @@
+{
+    "character": [
+        "rabbit",
+        "tiger",
+        "turtle",
+        "shooting star",
+        "dinosour",
+        "robot",
+        "otter",
+        "sexy woman"
+    ],
+    "theme": [
+        "hopeful",
+        "adventrous",
+        "horror",
+        "spooky",
+        "delightful",
+        "happy",
+        "strip club"
+    ],
+    "background": [
+        "jungle",
+        "ocean",
+        "on cloud",
+        "desert",
+        "castle",
+        "farm",
+        "New York"
+    ]
+}

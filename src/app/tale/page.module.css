@@ -1,0 +1,4 @@
+.taleContainer {
+    display: flex;
+    flex-direction: column;
+}

@@ -1,0 +1,34 @@
+.pick {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    font-size: 12px;
+
+    width: 60px;
+    height: 60px;
+    padding: 8px;
+    background-color: #fdc57b;
+    border-radius: 20px;
+
+    transition: all 0.5s;
+}
+
+.pick:hover {
+    transform: translateY(-7px);
+    /* animation: bounce 500ms infinite alternate ease-in; */
+}
+
+@keyframes bounce {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-5px);
+    }
+}
+
+.picked {
+    animation: bounce 500ms infinite alternate ease-in;
+}
