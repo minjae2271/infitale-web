@@ -7,7 +7,9 @@
         "dinosour",
         "robot",
         "otter",
-        "sexy woman"
+        "snowman",
+        "potato",
+        "dwarf"
     ],
     "theme": [
         "hopeful",
@@ -15,8 +17,7 @@
         "horror",
         "spooky",
         "delightful",
-        "happy",
-        "strip club"
+        "happy"
     ],
     "background": [
         "jungle",
@@ -25,6 +26,8 @@
         "desert",
         "castle",
         "farm",
-        "New York"
+        "New York",
+        "magical forest",
+        "iceburg"
     ]
 }

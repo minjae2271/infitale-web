@@ -3,8 +3,8 @@
 import styles from "./combo.module.css";
 import { useRouter } from "next/navigation";
 import { useRecoilState, useRecoilValue } from "recoil";
-import { characterState, themeState, backgroundState, storyState } from "../recoil/atoms";
-import { useState } from "react";
+import { characterState, themeState, backgroundState, storyState, pictureState } from "../recoil/atoms";
+import { useEffect, useState } from "react";
 import cx from 'classnames';
 
 export default function Combo() {
@@ -16,6 +16,10 @@ export default function Combo() {
   const background = useRecoilValue(backgroundState)
 
   const [story, setStory] = useRecoilState(storyState);
+  const [picture, setPicture] = useRecoilState(pictureState)
+
+    console.log(story)
+    console.log(picture)
 
   const onClickCombo = async () => {
 
@@ -50,7 +54,7 @@ export default function Combo() {
       } else {
         throw new Error("creating story failed");
       }
-      router.push(`/tale`)
+      router.replace(`/tale`)
 
     } catch(err) {
       console.log("Oops! Something is wrong.")
@@ -62,10 +66,10 @@ export default function Combo() {
   }
 
   return (
-    // {character && theme && background &&
-
-    // }
     <div id="combo" className={styles.comboWrapper}>
+      {!character && !theme && !background && 
+        <div>choose your character & theme & background </div>
+      }
       <div className={styles.comboPick}>{character}</div>
       {character && <div>+</div>}
       <div className={styles.comboPick}>{theme}</div>

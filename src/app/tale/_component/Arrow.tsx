@@ -2,10 +2,11 @@
 
 type Props = {
     page: number,
-    setPage: React.Dispatch<React.SetStateAction<number>>
+    setPage: React.Dispatch<React.SetStateAction<number>>,
+    loadingImage: boolean
 }
 
-export default function Arrow({page, setPage}: Props) {
+export default function Arrow({page, setPage, loadingImage}: Props) {
 
 
     const onClickLeft = () => {
@@ -20,8 +21,8 @@ export default function Arrow({page, setPage}: Props) {
     return (
         <>
         <div>
-            {page > -1 ? <button onClick={onClickLeft}>left</button> : null}
-            {page < 4 ? <button onClick={onClickRight}>right</button> : null}
+            {page > -1 ? <button onClick={onClickLeft} disabled={loadingImage}>left</button> : null}
+            {page < 4 ? <button onClick={onClickRight} disabled={loadingImage}>right</button> : null}
             
         </div>
         </>

@@ -10,15 +10,15 @@ export async function POST(req: Request) {
   const inputText = reqData.text;
 
   try {
-    const prompt = `Please draw picture of a children book from this lines of story. Do not include any words or letters.
-                      ###${inputText}###  
-                    `;
+    console.log(inputText)
+    const prompt = "Illustrate for a children’s book. Do not include any text in image. " + inputText
 
     const image = await openai.images.generate({
       model: "dall-e-3",
       prompt: prompt,
       n: 1,
       size: "1024x1024",
+      style: "natural"
     });
 
     return NextResponse.json(image);
