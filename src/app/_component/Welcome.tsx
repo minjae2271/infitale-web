@@ -6,7 +6,6 @@ export default function Welcome() {
         <>
         <div className={styles.container}>
           <div className={styles.fairytaleBox}>
-          
             <div className={styles.title}>
             <TextEffect per='word' as='h3' preset='slide'>
               Create Your Own Fairytales!

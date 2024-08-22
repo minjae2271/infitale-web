@@ -3,10 +3,9 @@
   flex-direction: column;
 
   width: 70%;
-  height: 100dvh;
-  max-width: 960px;
-  min-width: 350px;
-  /* margin-bottom: 16px; */
+  /* height: 100dvh; */
+  /* max-width: 960px; */
+  /* min-width: 350px; */
 
   border-radius: 20px;
 }
@@ -17,14 +16,14 @@
   align-items: center;
   justify-content: center;
   margin-top: 24px;
-  /* height: 100%; */
+
 }
 
 /* Fairytale box style */
 .fairytaleBox {
   background: rgba(255, 255, 255, 0.9);
   border-radius: 15px;
-  padding: 40px;
+  padding: 20px;
   max-width: 600px;
   text-align: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);

@@ -36,6 +36,7 @@ export async function POST(req: Request) {
     const sysTemplate = `You are a children story teller who writes wonderful stories for children.
         The words and phrases must follow strict rule that makes the story appropriate for children.
         Use the character, theme and background delimited by ####.
+        Do not give the character any name.
         character:####{input_character}####
         theme:####{input_theme}####
         background:####{input_background}####

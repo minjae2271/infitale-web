@@ -2,14 +2,56 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
+    align-items: center;
+
+    /* width: 85%; */
     gap: 8px;
-    font-size:25px;
+    font-size:20px;
 
     padding: 16px;
     margin: 16px;
     /* margin-top: 32px; */
     /* margin-bottom: 12px; */
 }
+
+
+
+.comboBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.comboPickWrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+}
+
+@keyframes bounce {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-10px);
+    }
+}
+
+.comboWord1 {
+    animation: bounce 600ms infinite alternate ease-in;
+}
+.comboWord2 {
+    animation: bounce 600ms 200ms infinite alternate ease-in;
+    /* animation-delay: 200s */
+}
+.comboWord3 {
+    animation: bounce 600ms 400ms infinite alternate ease-in;
+}
+
+
 
 .button {
     display: inline-block;

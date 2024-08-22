@@ -59,10 +59,12 @@ export default function TalePage() {
   }, [page]);
   return (
     <>
+    <main className={styles.main}>
       <div className={styles.taleContainer}>
         <Tale story={story} page={page} picture={picture} />
-        <Arrow page={page} setPage={setPage} loadingImage={loadingImage}/>
+        <Arrow page={page} setPage={setPage} loadingImage={loadingImage}/> 
       </div>
+    </main>
     </>
   );
 }

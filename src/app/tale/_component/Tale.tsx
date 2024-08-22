@@ -4,6 +4,7 @@ import StoryCard from "./StoryCard";
 import { Story } from "@/model/Story";
 import { Picture } from "@/model/Picture";
 import Image from "next/image";
+import styles from "./storyCard.module.css";
 
 type Props = {
   story: Story;
@@ -15,19 +16,16 @@ export default function Tale({ story, picture, page }: Props) {
   if (page === -1)
     return (
       <>
-        <div>{story.title}</div>
+        <h1 className={styles.storyCardTitle}>{story.title}</h1>
         {picture[0]?.url && (
-          // <img
-          //   style={{ width: "150px", height: "150px" }}
-          //   src={picture[0].url as string}
-          //   alt="pircture"
-          // />
-          <Image
-            src={picture[0].url as string}
-            alt="picture"
-            width={200}
-            height={200}
-          />
+          <div className={styles.imageWrapper}>
+            <Image
+              src={picture[0].url as string}
+              alt="picture"
+              width={300}
+              height={300}
+            />
+          </div>
         )}
       </>
     );

@@ -4,7 +4,7 @@ import styles from "./combo.module.css";
 import { useRouter } from "next/navigation";
 import { useRecoilState, useRecoilValue } from "recoil";
 import { characterState, themeState, backgroundState, storyState, pictureState } from "../recoil/atoms";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import cx from 'classnames';
 
 export default function Combo() {
@@ -68,16 +68,23 @@ export default function Combo() {
   return (
     <div id="combo" className={styles.comboWrapper}>
       {!character && !theme && !background && 
-        <div>choose your character & theme & background </div>
+        <div className={styles.comboBox}>
+          <div>choose your</div>
+          <div className={styles.comboWord1}>character</div>
+          <div className={styles.comboWord2}>theme</div>
+          <div className={styles.comboWord3}>background!</div>
+        </div>
       }
-      <div className={styles.comboPick}>{character}</div>
-      {character && <div>+</div>}
-      <div className={styles.comboPick}>{theme}</div>
-      {theme && <div>+</div>}
-      <div className={styles.comboPick}>{background}</div>
+      <div className={styles.comboPickWrapper}>
+        <div className={styles.comboPick}>{character}</div>
+        {character && <div>+</div>}
+        <div className={styles.comboPick}>{theme}</div>
+        {theme && <div>+</div>}
+        <div className={styles.comboPick}>{background}</div>
+      </div>
       {character && theme && background && (
             <button onClick={onClickCombo} className={cx(loading ? styles.loading : styles.button)} disabled={loading}>
-                {loading ? "making a fairytale!" : "make me a fairytale!"}
+                {loading ? "making fairytale!" : "make me fairytale!"}
             </button>
       )}
     </div>

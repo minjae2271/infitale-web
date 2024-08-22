@@ -1,4 +1,16 @@
-.arrow-wrapper {
+.arrowWrapper {
     display: flex;
     flex-direction: row;
+    gap: 0 32px;
+
+    padding: 16px;
+}
+
+.arrowButton {
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    outline: none;
 }

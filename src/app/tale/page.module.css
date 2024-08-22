@@ -1,4 +1,18 @@
-.taleContainer {
+.main {
     display: flex;
     flex-direction: column;
+    align-items: center;
+  
+    width: 70%;
+    height: 100dvh;
+    max-width: 960px;
+    min-width: 350px;
+}
+
+.taleContainer {
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+
+    margin-top: 16px;
 }
