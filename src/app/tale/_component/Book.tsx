@@ -2,7 +2,7 @@
 
 import { redirect } from 'next/navigation';
 import { useRecoilState, useRecoilValue } from "recoil"
-import { pageState, storyState, pictureState } from "@/app/recoil/atoms";
+import { storyState, pictureState } from "@/app/recoil/atoms";
 import { useEffect } from 'react';
 
 
@@ -12,8 +12,6 @@ type Props = {
 
 export default function Book({ children }: Props) {
     const story = useRecoilValue(storyState);
-    const page = useRecoilValue(pageState);
-    // const pic = useRecoilValue(pictureState)
 
     const [picture, setPicture] = useRecoilState(pictureState);
 

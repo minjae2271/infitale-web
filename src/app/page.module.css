@@ -1,9 +1,7 @@
 .main {
   display: flex;
   flex-direction: column;
-
-  width: 70%;
-  /* height: 100dvh; */
+  height: 100dvh;
   /* max-width: 960px; */
   /* min-width: 350px; */
 
